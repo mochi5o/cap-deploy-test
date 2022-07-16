@@ -1,0 +1,69 @@
+# Logfile created on 2022-07-16 16:39:03 +0900 by logger.rb/66358
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-07-16 16:39:03 +0900 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a5710693] Running /usr/bin/env mkdir -p /tmp as vagrant@deploy-server
+ DEBUG [a5710693] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a5710693] Finished in 0.260 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-5f4c839e15d4841269e3.sh 0.0%
+  INFO Uploading /tmp/git-ssh-5f4c839e15d4841269e3.sh 100.0%
+  INFO [e6ac4b84] Running /usr/bin/env chmod 700 /tmp/git-ssh-5f4c839e15d4841269e3.sh as vagrant@deploy-server
+ DEBUG [e6ac4b84] Command: /usr/bin/env chmod 700 /tmp/git-ssh-5f4c839e15d4841269e3.sh
+  INFO [e6ac4b84] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [14136110] Running /usr/bin/env git ls-remote git@github.com:mochi5o/cap-deploy-test.git HEAD as vagrant@deploy-server
+ DEBUG [14136110] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-5f4c839e15d4841269e3.sh" ; /usr/bin/env git ls-remote git@github.com:mochi5o/cap-deploy-test.git HEAD )
+ DEBUG [14136110] 	/usr/bin/env: git: No such file or directory
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-07-16 16:39:41 +0900 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [d9e30b8a] Running /usr/bin/env mkdir -p /tmp as vagrant@deploy-server
+ DEBUG [d9e30b8a] Command: /usr/bin/env mkdir -p /tmp
+  INFO [d9e30b8a] Finished in 0.225 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-831bd9375416a27c1beb.sh 0.0%
+  INFO Uploading /tmp/git-ssh-831bd9375416a27c1beb.sh 100.0%
+  INFO [79b3809f] Running /usr/bin/env chmod 700 /tmp/git-ssh-831bd9375416a27c1beb.sh as vagrant@deploy-server
+ DEBUG [79b3809f] Command: /usr/bin/env chmod 700 /tmp/git-ssh-831bd9375416a27c1beb.sh
+  INFO [79b3809f] Finished in 0.016 seconds with exit status 0 (successful).
+  INFO [39c910b1] Running /usr/bin/env git ls-remote git@github.com:mochi5o/cap-deploy-test.git HEAD as vagrant@deploy-server
+ DEBUG [39c910b1] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-831bd9375416a27c1beb.sh" ; /usr/bin/env git ls-remote git@github.com:mochi5o/cap-deploy-test.git HEAD )
+ DEBUG [39c910b1] 	/usr/bin/env: git: No such file or directory
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-07-16 17:06:56 +0900 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [83f5b88d] Running /usr/bin/env mkdir -p /tmp as vagrant@deploy-server
+ DEBUG [83f5b88d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [83f5b88d] Finished in 0.502 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-743154aaa1506b18c719.sh 0.0%
+  INFO Uploading /tmp/git-ssh-743154aaa1506b18c719.sh 100.0%
+  INFO [77f712e0] Running /usr/bin/env chmod 700 /tmp/git-ssh-743154aaa1506b18c719.sh as vagrant@deploy-server
+ DEBUG [77f712e0] Command: /usr/bin/env chmod 700 /tmp/git-ssh-743154aaa1506b18c719.sh
+  INFO [77f712e0] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [2022f7ed] Running /usr/bin/env git ls-remote git@github.com:mochi5o/cap-deploy-test.git HEAD as vagrant@deploy-server
+ DEBUG [2022f7ed] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-743154aaa1506b18c719.sh" ; /usr/bin/env git ls-remote git@github.com:mochi5o/cap-deploy-test.git HEAD )
+ DEBUG [2022f7ed] 	Warning: Permanently added 'github.com,52.192.72.89' (ECDSA) to the list of known hosts.
+ DEBUG [2022f7ed] 	Permission denied (publickey).
+ DEBUG [2022f7ed] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-07-16 17:09:49 +0900 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [e9b62091] Running /usr/bin/env mkdir -p /tmp as vagrant@deploy-server
+ DEBUG [e9b62091] Command: /usr/bin/env mkdir -p /tmp
+  INFO [e9b62091] Finished in 0.235 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-54c45f8807c068ff1b5f.sh 0.0%
+  INFO Uploading /tmp/git-ssh-54c45f8807c068ff1b5f.sh 100.0%
+  INFO [14b7fd29] Running /usr/bin/env chmod 700 /tmp/git-ssh-54c45f8807c068ff1b5f.sh as vagrant@deploy-server
+ DEBUG [14b7fd29] Command: /usr/bin/env chmod 700 /tmp/git-ssh-54c45f8807c068ff1b5f.sh
+  INFO [14b7fd29] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [9a164cf9] Running /usr/bin/env git ls-remote git@github.com:mochi5o/cap-deploy-test.git HEAD as vagrant@deploy-server
+ DEBUG [9a164cf9] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-54c45f8807c068ff1b5f.sh" ; /usr/bin/env git ls-remote git@github.com:mochi5o/cap-deploy-test.git HEAD )
+ DEBUG [9a164cf9] 	Warning: Permanently added the ECDSA host key for IP address '52.69.186.44' to the list of known hosts.
+ DEBUG [9a164cf9] 	6242a5a3dbcbf5c5b035dfead50dd3b8307dff15	HEAD
+  INFO [9a164cf9] Finished in 1.854 seconds with exit status 0 (successful).
+  INFO [71d90b8b] Running /usr/bin/env mkdir -p /var/www/test/shared /var/www/test/releases as vagrant@deploy-server
+ DEBUG [71d90b8b] Command: /usr/bin/env mkdir -p /var/www/test/shared /var/www/test/releases
+ DEBUG [71d90b8b] 	mkdir: cannot create directory ‘/var/www/test’
+ DEBUG [71d90b8b] 	: 許可がありません
+mkdir: cannot create directory ‘/var/www/test’: 許可がありません
