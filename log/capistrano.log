@@ -134,3 +134,95 @@ mkdir: cannot create directory ‘/var/www/test’: 許可がありません
  DEBUG [589cd498] 	fatal: Not a valid object name
  DEBUG [589cd498] 	tar: This does not look like a tar archive
 tar: Exiting with failure status due to previous errors
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-07-16 17:26:16 +0900 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [8b2eb107] Running /usr/bin/env sudo mkdir -pv /var/www/test as vagrant@deploy-server
+ DEBUG [8b2eb107] Command: /usr/bin/env sudo mkdir -pv /var/www/test
+  INFO [8b2eb107] Finished in 0.259 seconds with exit status 0 (successful).
+ DEBUG [d8b4368a] Running /usr/bin/env id -un as vagrant@deploy-server
+ DEBUG [d8b4368a] Command: /usr/bin/env id -un
+ DEBUG [d8b4368a] 	vagrant
+ DEBUG [d8b4368a] Finished in 0.019 seconds with exit status 0 (successful).
+ DEBUG [422d1fc2] Running /usr/bin/env id -gn as vagrant@deploy-server
+ DEBUG [422d1fc2] Command: /usr/bin/env id -gn
+ DEBUG [422d1fc2] 	vagrant
+ DEBUG [422d1fc2] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO [f2ae74b3] Running /usr/bin/env sudo chown vagrant:vagrant /var/www/test as vagrant@deploy-server
+ DEBUG [f2ae74b3] Command: /usr/bin/env sudo chown vagrant:vagrant /var/www/test
+  INFO [f2ae74b3] Finished in 0.032 seconds with exit status 0 (successful).
+  INFO [9293c682] Running /usr/bin/env mkdir -p /tmp as vagrant@deploy-server
+ DEBUG [9293c682] Command: /usr/bin/env mkdir -p /tmp
+  INFO [9293c682] Finished in 0.016 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-b225e974fa56ce2ab585.sh 0.0%
+  INFO Uploading /tmp/git-ssh-b225e974fa56ce2ab585.sh 100.0%
+  INFO [62c09823] Running /usr/bin/env chmod 700 /tmp/git-ssh-b225e974fa56ce2ab585.sh as vagrant@deploy-server
+ DEBUG [62c09823] Command: /usr/bin/env chmod 700 /tmp/git-ssh-b225e974fa56ce2ab585.sh
+  INFO [62c09823] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [2488febc] Running /usr/bin/env git ls-remote git@github.com:mochi5o/cap-deploy-test.git HEAD as vagrant@deploy-server
+ DEBUG [2488febc] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-b225e974fa56ce2ab585.sh" ; /usr/bin/env git ls-remote git@github.com:mochi5o/cap-deploy-test.git HEAD )
+ DEBUG [2488febc] 	Warning: Permanently added the ECDSA host key for IP address '13.114.40.48' to the list of known hosts.
+ DEBUG [2488febc] 	6242a5a3dbcbf5c5b035dfead50dd3b8307dff15	HEAD
+  INFO [2488febc] Finished in 1.891 seconds with exit status 0 (successful).
+  INFO [b868f41f] Running /usr/bin/env mkdir -p /var/www/test/shared /var/www/test/releases as vagrant@deploy-server
+ DEBUG [b868f41f] Command: /usr/bin/env mkdir -p /var/www/test/shared /var/www/test/releases
+  INFO [b868f41f] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [fe1cfab9] Running [ -f /var/www/test/current/REVISION ] as vagrant@deploy-server
+ DEBUG [fe1cfab9] Command: [ -f /var/www/test/current/REVISION ]
+ DEBUG [fe1cfab9] Finished in 0.016 seconds with exit status 1 (failed).
+ DEBUG [57e36178] Running [ -f /var/www/test/repo/HEAD ] as vagrant@deploy-server
+ DEBUG [57e36178] Command: [ -f /var/www/test/repo/HEAD ]
+ DEBUG [57e36178] Finished in 0.016 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/test/repo
+ DEBUG [1892807a] Running if test ! -d /var/www/test/repo; then echo "Directory does not exist '/var/www/test/repo'" 1>&2; false; fi as vagrant@deploy-server
+ DEBUG [1892807a] Command: if test ! -d /var/www/test/repo; then echo "Directory does not exist '/var/www/test/repo'" 1>&2; false; fi
+ DEBUG [1892807a] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [3e140f20] Running /usr/bin/env git remote set-url origin git@github.com:mochi5o/cap-deploy-test.git as vagrant@deploy-server
+ DEBUG [3e140f20] Command: cd /var/www/test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-b225e974fa56ce2ab585.sh" ; /usr/bin/env git remote set-url origin git@github.com:mochi5o/cap-deploy-test.git )
+  INFO [3e140f20] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [25cc21ed] Running /usr/bin/env git remote update --prune as vagrant@deploy-server
+ DEBUG [25cc21ed] Command: cd /var/www/test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-b225e974fa56ce2ab585.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [25cc21ed] 	Fetching origin
+ DEBUG [25cc21ed] 	From github.com:mochi5o/cap-deploy-test
+   a9ea525..8ccfc55  add-cap    -> add-cap
+   a9ea525..8ccfc55  refs/pull/1/head -> refs/pull/1/head
+ + ccf96b5...6fb3fa6 refs/pull/1/merge -> refs/pull/1/merge  (forced update)
+  INFO [25cc21ed] Finished in 2.016 seconds with exit status 0 (successful).
+ DEBUG [a787df05] Running if test ! -d /var/www/test/repo; then echo "Directory does not exist '/var/www/test/repo'" 1>&2; false; fi as vagrant@deploy-server
+ DEBUG [a787df05] Command: if test ! -d /var/www/test/repo; then echo "Directory does not exist '/var/www/test/repo'" 1>&2; false; fi
+ DEBUG [a787df05] Finished in 0.016 seconds with exit status 0 (successful).
+  INFO [50d87f2c] Running /usr/bin/env mkdir -p /var/www/test/releases/20220716082618 as vagrant@deploy-server
+ DEBUG [50d87f2c] Command: cd /var/www/test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-b225e974fa56ce2ab585.sh" ; /usr/bin/env mkdir -p /var/www/test/releases/20220716082618 )
+  INFO [50d87f2c] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [25f559ab] Running /usr/bin/env git archive add-cap | /usr/bin/env tar -x -f - -C /var/www/test/releases/20220716082618 as vagrant@deploy-server
+ DEBUG [25f559ab] Command: cd /var/www/test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-b225e974fa56ce2ab585.sh" ; /usr/bin/env git archive add-cap | /usr/bin/env tar -x -f - -C /var/www/test/releases/20220716082618 )
+  INFO [25f559ab] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [32517a75] Running if test ! -d /var/www/test/repo; then echo "Directory does not exist '/var/www/test/repo'" 1>&2; false; fi as vagrant@deploy-server
+ DEBUG [32517a75] Command: if test ! -d /var/www/test/repo; then echo "Directory does not exist '/var/www/test/repo'" 1>&2; false; fi
+ DEBUG [32517a75] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [ec06de09] Running /usr/bin/env git rev-list --max-count=1 add-cap as vagrant@deploy-server
+ DEBUG [ec06de09] Command: cd /var/www/test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-b225e974fa56ce2ab585.sh" ; /usr/bin/env git rev-list --max-count=1 add-cap )
+ DEBUG [ec06de09] 	8ccfc558ea6160abf3e7418de5b35bccbf0d1f3b
+ DEBUG [ec06de09] Finished in 0.020 seconds with exit status 0 (successful).
+ DEBUG [32826230] Running if test ! -d /var/www/test/releases/20220716082618; then echo "Directory does not exist '/var/www/test/releases/20220716082618'" 1>&2; false; fi as vagrant@deploy-server
+ DEBUG [32826230] Command: if test ! -d /var/www/test/releases/20220716082618; then echo "Directory does not exist '/var/www/test/releases/20220716082618'" 1>&2; false; fi
+ DEBUG [32826230] Finished in 0.012 seconds with exit status 0 (successful).
+  INFO [b632d151] Running /usr/bin/env echo "8ccfc558ea6160abf3e7418de5b35bccbf0d1f3b" > REVISION as vagrant@deploy-server
+ DEBUG [b632d151] Command: cd /var/www/test/releases/20220716082618 && /usr/bin/env echo "8ccfc558ea6160abf3e7418de5b35bccbf0d1f3b" > REVISION
+  INFO [b632d151] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO [be86d51a] Running /usr/bin/env ln -s /var/www/test/releases/20220716082618 /var/www/test/releases/current as vagrant@deploy-server
+ DEBUG [be86d51a] Command: /usr/bin/env ln -s /var/www/test/releases/20220716082618 /var/www/test/releases/current
+  INFO [be86d51a] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO [7070bb28] Running /usr/bin/env mv /var/www/test/releases/current /var/www/test as vagrant@deploy-server
+ DEBUG [7070bb28] Command: /usr/bin/env mv /var/www/test/releases/current /var/www/test
+  INFO [7070bb28] Finished in 0.020 seconds with exit status 0 (successful).
+ DEBUG [53e77dfb] Running /usr/bin/env ls -x /var/www/test/releases as vagrant@deploy-server
+ DEBUG [53e77dfb] Command: /usr/bin/env ls -x /var/www/test/releases
+ DEBUG [53e77dfb] 	20220716082026	20220716082618
+ DEBUG [53e77dfb] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [1cba64cb] Running if test ! -d /var/www/test/releases; then echo "Directory does not exist '/var/www/test/releases'" 1>&2; false; fi as vagrant@deploy-server
+ DEBUG [1cba64cb] Command: if test ! -d /var/www/test/releases; then echo "Directory does not exist '/var/www/test/releases'" 1>&2; false; fi
+ DEBUG [1cba64cb] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [e26506cb] Running /usr/bin/env echo "Branch add-cap (at 8ccfc558ea6160abf3e7418de5b35bccbf0d1f3b) deployed as release 20220716082618 by mochiko" >> /var/www/test/revisions.log as vagrant@deploy-server
+ DEBUG [e26506cb] Command: cd /var/www/test/releases && /usr/bin/env echo "Branch add-cap (at 8ccfc558ea6160abf3e7418de5b35bccbf0d1f3b) deployed as release 20220716082618 by mochiko" >> /var/www/test/revisions.log
+  INFO [e26506cb] Finished in 0.016 seconds with exit status 0 (successful).
